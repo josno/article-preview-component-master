@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500&display=swap");
+
 * {
 	box-sizing: border-box;
 }
 
 body {
 	background-color: #f0f0f0;
-	/* #edf2f8; */
+	font-family: "Manrope", sans-serif;
+	font-weight: 300;
+	/* #edf2f8; gradient to*/
 }
 .attribution {
 	font-size: 11px;
