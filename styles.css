@@ -41,6 +41,11 @@ img {
 	background-color: #ffffff;
 	flex-grow: 1;
 	width: 100%;
+	position: relative;
+}
+
+.button-wrapper {
+	position: relative;
 }
 
 .bold-text {
@@ -78,6 +83,7 @@ img {
 	display: flex;
 	align-items: center;
 	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 .contact {
@@ -103,19 +109,29 @@ button {
 	border-radius: 50%;
 	border: none;
 	position: absolute;
-	right: 33%;
-	bottom: 24%;
+	right: 0px;
+	bottom: 15px;
+	transition: 0.3s;
+	z-index: 99;
+}
+
+button:hover,
+a:hover {
+	opacity: 0.5;
+	cursor: pointer;
 }
 
 .share-details {
 	background-color: hsl(217, 19%, 35%);
-	position: relative;
+	right: 0px;
+	bottom: 0;
+	position: absolute;
 	width: 300px;
 	padding: 15px 20px;
-	right: 30px;
-	top: 10px;
-	display: none;
+	display: flex;
 	align-items: center;
+	-webkit-animation: fadeIn 700ms ease-in-out 1s both;
+	animation: fadeIn 700ms ease-in-out 1s both;
 }
 
 .share-details p {
@@ -131,15 +147,16 @@ button {
 .icons {
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
-}
-
-.attribution a {
-	color: hsl(228, 45%, 44%);
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @media (min-width: 768px) {
@@ -162,6 +179,7 @@ button {
 
 	.details-container {
 		width: 500px;
+		position: static;
 	}
 
 	.bold-text {
@@ -176,8 +194,29 @@ button {
 		font-size: 13px;
 	}
 
-	button {
-		right: 15%;
-		bottom: 34%;
+	.share-details {
+		border-radius: 10px;
+		bottom: 70px;
+		justify-content: center;
+		top: 51%;
+		left: 67%;
+		right: 35%;
+		height: 60px;
+		width: 220px;
+	}
+
+	button a {
+		width: 20px;
+		height: 20px;
+	}
+
+	.icons:after {
+		content: "\A";
+		border-style: solid;
+		border-width: 15px 15px 15px 0;
+		border-color: transparent hsl(217, 19%, 35%) transparent transparent;
+		position: absolute;
+		left: 20px;
+		transform: rotate(-90deg) translatex(-35px);
 	}
 }
