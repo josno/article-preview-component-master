@@ -106,15 +106,23 @@ button {
 	border: none;
 	position: absolute;
 	right: 0px;
-	bottom: 15px;
+	bottom: 14px;
 	transition: 0.3s;
 	z-index: 99;
 }
 
 button:hover,
 a:hover {
-	opacity: 0.5;
+	transform: translateY(-1px);
 	cursor: pointer;
+}
+
+.active-button-color {
+	background-color: hsl(214, 17%, 51%);
+}
+
+.active-fill-color {
+	fill: hsl(210, 46%, 95%);
 }
 
 .share-details {
@@ -124,10 +132,10 @@ a:hover {
 	position: absolute;
 	width: 300px;
 	padding: 15px 20px;
-	display: flex;
+	display: none;
 	align-items: center;
 	-webkit-animation: fadeIn 700ms ease-in-out 1s both;
-	animation: fadeIn 700ms ease-in-out 1s both;
+	animation: fadeIn 500ms ease-in-out;
 }
 
 .share-details p {
