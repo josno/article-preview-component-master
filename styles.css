@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #f0f0f0;
+	background-color: hsl(210, 46%, 95%);
 	font-family: "Manrope", sans-serif;
 	font-size: 13px;
 }
@@ -27,6 +27,10 @@ img {
 	width: 100%;
 }
 
+.flex {
+	display: flex;
+}
+
 .drawers-img {
 	position: relative;
 	bottom: 15px;
@@ -35,6 +39,8 @@ img {
 .details-container {
 	padding: 22px 30px 10px 30px;
 	background-color: #ffffff;
+	flex-grow: 1;
+	width: 100%;
 }
 
 .bold-text {
@@ -60,7 +66,10 @@ img {
 	background-color: #edf2f8;
 	border-radius: 10px;
 	overflow: hidden;
+	flex-direction: column;
+	display: flex;
 }
+
 .drawers-img {
 	position: relative;
 	bottom: 14px;
@@ -103,4 +112,39 @@ button {
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+	.inner-container {
+		flex-direction: row;
+		width: 700px;
+	}
+
+	.img-container {
+		height: auto;
+		width: 50%;
+	}
+
+	.img-container img {
+		height: 100%;
+		object-fit: cover;
+		bottom: 0px;
+		width: 120%;
+	}
+
+	.details-container {
+		width: 500px;
+	}
+
+	.bold-text {
+		font-size: 20px;
+	}
+
+	.contact p {
+		font-size: 13px;
+	}
+
+	.details-text {
+		font-size: 13px;
+	}
 }
