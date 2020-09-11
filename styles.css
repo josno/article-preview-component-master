@@ -78,7 +78,6 @@ img {
 	display: flex;
 	align-items: center;
 	margin-top: 30px;
-	margin-bottom: 8px;
 }
 
 .contact {
@@ -103,6 +102,35 @@ button {
 	height: 30px;
 	border-radius: 50%;
 	border: none;
+	position: absolute;
+	right: 33%;
+	bottom: 24%;
+}
+
+.share-details {
+	background-color: hsl(217, 19%, 35%);
+	position: relative;
+	width: 300px;
+	padding: 15px 20px;
+	right: 30px;
+	top: 10px;
+	display: none;
+	align-items: center;
+}
+
+.share-details p {
+	letter-spacing: 5px;
+	font-size: 13px;
+	color: hsl(212, 23%, 69%);
+}
+
+.share-details a {
+	margin: 10px;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
 }
 
 .attribution {
@@ -146,5 +174,10 @@ button {
 
 	.details-text {
 		font-size: 13px;
+	}
+
+	button {
+		right: 15%;
+		bottom: 34%;
 	}
 }
